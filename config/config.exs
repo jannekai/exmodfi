@@ -9,7 +9,8 @@ use Mix.Config
 config :exmodfi, Exmodfi.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "D3Rya6EIny/sNNEBtHNL/AUqlJWSScZwiEZS01+jrsHX862KyUBFgWDx0BLLz+wo",
-  debug_errors: false
+  debug_errors: false,
+  pubsub: [name: Tmp.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
