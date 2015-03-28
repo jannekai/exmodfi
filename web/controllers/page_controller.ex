@@ -32,8 +32,8 @@ defmodule Exmodfi.PageController do
   end
 
   def show(conn, %{"article" => id}) do
-    Logger.debug "show article #{inspect id}"
-    render conn, "index.html", pagetitle: "", articles: @articles
+    article = find_article id
+    render conn, "_article.html", pagetitle: " - #{article[:title]}", id: article[:id], date: article[:data], title: article[:ttile]
   end
 
   def show(conn, %{} = params) do
@@ -44,4 +44,5 @@ defmodule Exmodfi.PageController do
   defp find_article(article_id) do
     Enum.find(@articles, :error, fn(article) -> article[:id] == article_id end)
   end
+
 end
