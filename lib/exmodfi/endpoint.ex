@@ -4,7 +4,7 @@ defmodule Exmodfi.Endpoint do
   # Serve at "/" the given assets from "priv/static" directory
   plug Plug.Static,
     at: "/", from: :exmodfi,
-    only: ~w(css images js favicon.ico robots.txt)
+    only: ~w(css images js data favicon.ico robots.txt)
 
   plug Plug.Logger
 

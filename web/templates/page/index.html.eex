@@ -1,34 +1,40 @@
-<div class="jumbotron">
-  <h2>Welcome to Phoenix!</h2>
-  <p class="lead">Phoenix is an Elixir Web Framework targeting full-featured, fault tolerant applications with realtime functionality.</p>
+
+
+<div class="row article">
+	<h1>
+		<a class="nohover" href="/article/elixir-meetup"><span>26.3.2015</span></a>
+		<a class="border" href="/article/elixir-meetup">Presentation at Helsinki Elixir Meetup</a>
+	</h1>
+	<div class="intro">
+		<p>Today was the first <a href="http://www.meetup.com/Helsinki-Elixir">meetup</a> of Helsinki <a href="http://elixir-lang.org/">Elixir</a> elixir users.
+		I did a short presentation of <a href="https://github.com/GrandCru/GoogleSheets">Google Sheets</a> library, for polling and loading CSV
+		data from a Google Spreadsheet.</p>
+		<p>Click <a href="http://mod.fi/data/googlesheets/index.html">here to view the presentation</a></p>
+	</div>
 </div>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/issues?state=open">Issues</a>
-      </li>
-      <li>
-        <a href="irc://irc.freenode.net/elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/chris_mccord">@chris_mccord</a>
-      </li>
-    </ul>
-  </div>
+<div class="row article">
+	<h1>
+		<a class="nohover" href="/article/elixir-meetup"><span>26.3.2015</span></a>
+		<a class="border" href="/article/elixir-meetup">Presentation at Helsinki Elixir Meetup</a>
+	</h1>
+	<div class="intro">
+		<p>Today was the first <a href="http://www.meetup.com/Helsinki-Elixir">meetup</a> of Helsinki <a href="http://elixir-lang.org/">Elixir</a> elixir users.</p>
+		<p>I did a short presentation of <a href="https://github.com/GrandCru/GoogleSheets">Google Sheets</a> library, for polling and loading CSV
+		data from a Google Spreadsheet.</p>
+		<p>Click <a href="http://mod.fi/data/googlesheets/index.html">here to view the presentation</a></p>
+	</div>
 </div>
 
+<div class="row article">
+	<h1>
+		<a class="nohover" href="/article/elixir-meetup"><span>26.3.2015</span></a>
+		<a class="border" href="/article/elixir-meetup">Presentation at Helsinki Elixir Meetup</a>
+	</h1>
+	<div class="intro">
+		<p>Today was the first <a href="http://www.meetup.com/Helsinki-Elixir">meetup</a> of Helsinki <a href="http://elixir-lang.org/">Elixir</a> elixir users.</p>
+		<p>I did a short presentation of <a href="https://github.com/GrandCru/GoogleSheets">Google Sheets</a> library, for polling and loading CSV
+		data from a Google Spreadsheet.</p>
+		<p>Click <a href="http://mod.fi/data/googlesheets/index.html">here to view the presentation</a></p>
+	</div>
+</div>

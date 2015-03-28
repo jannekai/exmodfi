@@ -3,7 +3,7 @@ defmodule Exmodfi.ArticleController do
 
   plug :action
 
-  def article(conn, %{"article" => article}) do
-    render conn, "article.html", article: article
+  def show(conn, %{"article" => article}) do
+    render conn, "article.html", article: article, title: article
   end
 end

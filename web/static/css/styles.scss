@@ -1,0 +1,187 @@
+/************************************************************************************************
+* Structure
+************************************************************************************************/
+html, body {
+    height: 100%;
+    font-family: Verdana, sans-serif;
+    line-height: 1.6;
+}
+body {
+    background: url(/images/bg.png) repeat;
+}
+.container {
+    width: 650px;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.row {
+    margin: 0px;
+}
+
+/************************************************************************************************
+* Miscellaneous utility styles
+************************************************************************************************/
+ul.none {
+    margin: 0;
+    padding: 0;
+}
+ul.none li {
+    list-style-type: none;
+}
+.img_round {
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #eee;
+}
+.img_left {
+    float: left;
+    display: block;
+    margin: 0 20px 20px 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #eee;
+}
+
+/*************************************************************************************************
+*   Header / navigation styles
+*************************************************************************************************/
+.logo {
+    position: absolute;
+    right: -44px;
+    top: 90px;
+}
+.header {
+    position: relative;
+    background-image: url(/images/tree.png);
+    background-repeat: no-repeat;
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 40px;
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: right;
+    height: 90px;
+    width: 700px;
+    border-bottom: 2px solid black;
+    padding-right: 30px;
+}
+.header ul {
+    margin: 0;
+    padding: 0;
+}
+.header li {
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+.header a:link, .header a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px 10px 10px;
+}
+.header a:hover, .header a:active {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px 10px 10px;
+}
+.header a.rssicon:link, .header a.rssicon:visited, .header a.rssicon:hover, .header a.rssicon:active {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/*************************************************************************************************
+* Headers
+*************************************************************************************************/
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Sue Ellen Francisco', cursive;
+}
+h2 {
+    font-size: 24%;
+    font-weight: bold;
+    font-family: 'Sue Ellen Francisco', cursive;
+}
+h3 {
+    font-size: 18%;
+    font-weight: bold;
+    font-family: 'Sue Ellen Francisco', cursive;
+}
+pre {
+    padding: 20px;
+    background-color: #ddd;
+}
+
+/*************************************************************************************************
+* Content
+*************************************************************************************************/
+.content a:link, .content a:visited {
+    color: black;
+    background-color: #eee;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+.content a:hover, .content a:active {
+    color: white;
+    background-color: orange;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+.content a.nohover:link, .content a.nohover:visited, .content a.nohover:hover, .content a.nohover:active {
+    border-bottom: none !important;
+    text-decoration: none !important;
+    color: black !important;
+    background-color: transparent;
+    padding: 0;
+}
+
+.content a.border:link, .content a.border:visited {
+    border-bottom: none !important;
+    text-decoration: none !important;
+    color: black !important;
+    background-color: transparent;
+    padding: 2px 5px;
+}
+
+.content a.border:hover, .content a.border:active {
+    border-radius: 10px;
+    text-decoration: none !important;
+    color: white !important;
+    background-color: black !important;
+    padding: 2px 5px;
+}
+
+/*************************************************************************************************
+* Article
+*************************************************************************************************/
+.article {
+    margin: 0 0 20px 0;
+}
+.article h1 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid orange;
+}
+.article h1 span {
+    font-size: 20px;
+    color: orange;
+}
+.article .read_more {
+    margin-top: 20px;
+    border-bottom: 1px dotted orange;
+    padding-bottom: 60px;
+}
