@@ -23,8 +23,8 @@ defmodule Exmodfi.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, "~> 0.10.0"},
-     {:phoenix_ecto, "~> 0.1"},
-     {:postgrex, ">= 0.0.0"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:earmark, "~> 0.1.15" }
+    ]
   end
 end

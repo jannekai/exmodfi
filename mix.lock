@@ -1,6 +1,7 @@
 %{"cowboy": {:hex, :cowboy, "1.0.0"},
   "cowlib": {:hex, :cowlib, "1.0.1"},
   "decimal": {:hex, :decimal, "1.1.0"},
+  "earmark": {:hex, :earmark, "0.1.15"},
   "ecto": {:hex, :ecto, "0.10.1"},
   "phoenix": {:hex, :phoenix, "0.10.0"},
   "phoenix_ecto": {:hex, :phoenix_ecto, "0.2.0"},

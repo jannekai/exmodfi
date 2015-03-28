@@ -12,8 +12,8 @@ defmodule Exmodfi.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/contact", PageController, :index
-    get "/article/:article", ArticleController, :show
+    get "/:page", PageController, :show
+    get "/article/:article", PageController, :show
   end
 
 end

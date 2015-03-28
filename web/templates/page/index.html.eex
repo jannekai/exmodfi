@@ -1,40 +1,5 @@
-
-
-<div class="row article">
-	<h1>
-		<a class="nohover" href="/article/elixir-meetup"><span>26.3.2015</span></a>
-		<a class="border" href="/article/elixir-meetup">Presentation at Helsinki Elixir Meetup</a>
-	</h1>
-	<div class="intro">
-		<p>Today was the first <a href="http://www.meetup.com/Helsinki-Elixir">meetup</a> of Helsinki <a href="http://elixir-lang.org/">Elixir</a> elixir users.
-		I did a short presentation of <a href="https://github.com/GrandCru/GoogleSheets">Google Sheets</a> library, for polling and loading CSV
-		data from a Google Spreadsheet.</p>
-		<p>Click <a href="http://mod.fi/data/googlesheets/index.html">here to view the presentation</a></p>
-	</div>
-</div>
-
-<div class="row article">
-	<h1>
-		<a class="nohover" href="/article/elixir-meetup"><span>26.3.2015</span></a>
-		<a class="border" href="/article/elixir-meetup">Presentation at Helsinki Elixir Meetup</a>
-	</h1>
-	<div class="intro">
-		<p>Today was the first <a href="http://www.meetup.com/Helsinki-Elixir">meetup</a> of Helsinki <a href="http://elixir-lang.org/">Elixir</a> elixir users.</p>
-		<p>I did a short presentation of <a href="https://github.com/GrandCru/GoogleSheets">Google Sheets</a> library, for polling and loading CSV
-		data from a Google Spreadsheet.</p>
-		<p>Click <a href="http://mod.fi/data/googlesheets/index.html">here to view the presentation</a></p>
-	</div>
-</div>
-
-<div class="row article">
-	<h1>
-		<a class="nohover" href="/article/elixir-meetup"><span>26.3.2015</span></a>
-		<a class="border" href="/article/elixir-meetup">Presentation at Helsinki Elixir Meetup</a>
-	</h1>
-	<div class="intro">
-		<p>Today was the first <a href="http://www.meetup.com/Helsinki-Elixir">meetup</a> of Helsinki <a href="http://elixir-lang.org/">Elixir</a> elixir users.</p>
-		<p>I did a short presentation of <a href="https://github.com/GrandCru/GoogleSheets">Google Sheets</a> library, for polling and loading CSV
-		data from a Google Spreadsheet.</p>
-		<p>Click <a href="http://mod.fi/data/googlesheets/index.html">here to view the presentation</a></p>
-	</div>
-</div>
+<%=
+for article <- @articles do
+	Exmodfi.SharedView.render "_article.html", id: article[:id], title: article[:title], date: article[:date]
+end
+%>
