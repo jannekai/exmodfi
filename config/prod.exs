@@ -8,7 +8,10 @@ use Mix.Config
 # meaningful, we use this information when generating URLs.
 config :exmodfi, Exmodfi.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "www.mod.fi"]
+  url: [host: "www.mod.fi"],
+  secret_key_base: "ER/VmkJM1j9h0oNbCfs9lcuChjo1s1tai5GVvM37FNnf7B/t3C4C7xYtSD+dyCFG",
+  server: true,
+  debug_errors: false
 
 # ## SSL Support
 #
@@ -39,7 +42,3 @@ config :logger, level: :info
 #
 #     config :exmodfi, Exmodfi.Endpoint, server: true
 #
-
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"

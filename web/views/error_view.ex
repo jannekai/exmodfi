@@ -2,7 +2,7 @@ defmodule Exmodfi.ErrorView do
   use Exmodfi.Web, :view
 
   def render("404.html", _assigns) do
-    "Page not found - 404"
+    render "page_not_found.html", %{}
   end
 
   def render("500.html", _assigns) do

@@ -8,7 +8,8 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :exmodfi, Exmodfi.Endpoint,
   http: [port: 4000],
-  debug_errors: true,
+  debug_errors: false,
+  catch_errors: true,
   cache_static_lookup: false,
   watchers: [{Path.expand("node_modules/brunch/bin/brunch"), ["watch"]}]
 

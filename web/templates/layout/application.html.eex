@@ -1,36 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Janne Kaistinen<%= render Exmodfi.PageView, "_title.html", pagetitle: @pagetitle %></title>
-  <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-  <link href='http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="header">
-        <div class="logo"><img src="/images/logo.jpg"></div>
-        <ul>
-          <li><a href="/">Posts</a></li>
-          <li><a href="/contact">Contact</a></li>
-          </ul>
-      </div>
-    </div>
-    <div class="content"><%= @inner %></div>
-  </div>
-  <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-2015173-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</body>
-</html>
+<%= render Exmodfi.SharedView, "site_header.html", pagetitle: @pagetitle %></title>
+<%= @inner %>
+<%= render Exmodfi.SharedView, "site_footer.html", %{} %></title>

@@ -16,23 +16,27 @@ defmodule Exmodfi.PageController do
     [id: "interface-does-make-a-difference", date: "2009-05-17", title: "Interface does make a difference"],
     [id: "site-updated-with-custom-cms", date: "2008-10-28", title: "Site updated with custom CMS"],
     [id: "assembly-2007", date: "2007-08-14", title: "Assembly 2007"],
-    [id: "launchy", date: "2007-08-07", title: "Launchy"],
     [id: "easy-backup-for-dynamic-web-sites", date: "2008-06-22", title: "Easy backup for dynamic web sites"],
     [id: "why-i-chose-wordpress", date: "2007-06-10", title: "Why I chose wordpress"]
   ]
 
-  def index(conn, params) do
-    Logger.debug "index #{inspect params}"
+  def index(conn, _params) do
     render conn, "index.html", pagetitle: "", articles: @articles
   end
 
-  def show(conn, %{"page" => "contact"} = params) do
+  def show(conn, %{"page" => "contact"}) do
     render conn, "contact.html", pagetitle: " - Contact"
   end
 
   def show(conn, %{"article" => id}) do
-    article = find_article id
-    render conn, "_article.html", pagetitle: " - #{article[:title]}", id: article[:id], date: article[:data], title: article[:ttile]
+    case find_article id do
+      :error -> render conn, "page_not_found.html", pagetitle: "", article: id
+      article -> render conn, "_article.html", pagetitle: " - #{article[:title]}", id: article[:id], date: article[:data], title: article[:title]
+    end
+  end
+
+  def show(conn, _params) do
+    render conn, "page_not_found.html", pagetitle: ""
   end
 
   defp find_article(article_id) do

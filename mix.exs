@@ -15,7 +15,7 @@ defmodule Exmodfi.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Exmodfi, []},
-     applications: [:phoenix, :cowboy, :logger]]
+     applications: [:phoenix, :cowboy, :logger, :earmark]]
   end
 
   # Specifies your project dependencies
@@ -24,7 +24,8 @@ defmodule Exmodfi.Mixfile do
   defp deps do
     [{:phoenix, "~> 0.10.0"},
      {:cowboy, "~> 1.0"},
-     {:earmark, "~> 0.1.15" }
+     {:earmark, "~> 0.1.15" },
+     {:exrm, "~> 0.15.3"}
     ]
   end
 end
