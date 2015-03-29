@@ -1,0 +1,17 @@
+upstream exmodfi {
+    server 127.0.0.1:8888;
+}
+server{
+    listen 80;
+    server_name .mod.fi;
+
+    location / {
+        try_files $uri @proxy;
+    }
+
+    location @proxy {
+        include proxy_params;
+        proxy_redirect off;
+        proxy_pass http://exmodfi;
+    }
+}
