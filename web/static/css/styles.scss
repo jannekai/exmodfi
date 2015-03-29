@@ -10,15 +10,13 @@ body {
     background: url(/images/bg.png) repeat;
 }
 .container {
-    width: 650px;
+    width: 660px;
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 0;
     margin: 20px auto;
-}
-.row {
-    margin: 0px;
+    padding: 20px 40px;
 }
 
 /************************************************************************************************
@@ -48,7 +46,7 @@ ul.none li {
 *************************************************************************************************/
 .logo {
     position: absolute;
-    right: -44px;
+    right: -49px;
     top: 90px;
 }
 .header {
@@ -169,7 +167,6 @@ pre {
 * Article
 *************************************************************************************************/
 .article {
-    margin: 0 0 20px 0;
 }
 .article h1 {
     margin-bottom: 20px;

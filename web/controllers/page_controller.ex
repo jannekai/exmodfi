@@ -26,19 +26,13 @@ defmodule Exmodfi.PageController do
     render conn, "index.html", pagetitle: "", articles: @articles
   end
 
-  def show(conn, %{"page" => "content"} = params) do
-    Logger.debug "show page #{inspect params}"
-    render conn, "index.html", pagetitle: "", articles: @articles
+  def show(conn, %{"page" => "contact"} = params) do
+    render conn, "contact.html", pagetitle: " - Contact"
   end
 
   def show(conn, %{"article" => id}) do
     article = find_article id
     render conn, "_article.html", pagetitle: " - #{article[:title]}", id: article[:id], date: article[:data], title: article[:ttile]
-  end
-
-  def show(conn, %{} = params) do
-    Logger.debug "no match #{inspect params}"
-    render conn, "index.html", pagetitle: "", articles: @articles
   end
 
   defp find_article(article_id) do
