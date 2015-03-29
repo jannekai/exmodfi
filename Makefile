@@ -26,18 +26,16 @@ release:
 	MIX_ENV=prod mix release
 
 release-console: release
-	MIX_ENV=PROD PORT=8888 rel/exmodfi/bin/exmodfi console
+	MIX_ENV=prod PORT=8888 rel/exmodfi/bin/exmodfi console
 
 release-start:
-	MIX_ENV=PROD PORT=8888 rel/exmodfi/bin/exmodfi start
+	MIX_ENV=prod PORT=8888 rel/exmodfi/bin/exmodfi start
 
 release-stop:
-	MIX_ENV=PROD PORT=8888 rel/exmodfi/bin/exmodfi stop
+	MIX_ENV=prod PORT=8888 rel/exmodfi/bin/exmodfi stop
 
 release-ping:
-	MIX_ENV=PROD PORT=8888 rel/exmodfi/bin/exmodfi ping
-
-
+	MIX_ENV=prod PORT=8888 rel/exmodfi/bin/exmodfi ping
 
 
 .PHONY: all deps compile test run clean
