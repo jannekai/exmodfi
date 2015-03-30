@@ -16,25 +16,18 @@ routes: compile
 	mix phoenix.routes
 
 run: compile
-	mix phoenix.server
+	iex -S mix phoenix.server
 
 clean:
 	mix deps.clean --all
 	mix clean
 
-release:
-	MIX_ENV=prod mix release
+prod: deps
+	MIX_ENV=prod mix do deps.get, compile.protocols
 
-test-release-console: release
-	MIX_ENV=prod PORT=4000 rel/exmodfi/bin/exmodfi console
+# For testing running in production mode, actual launch on server is done with deployment/exmodfi.upstart.conf
+prod-run:
+	mkdir -p log
+	MIX_ENV=prod PORT=8080 elixir --name exmodfi@127.0.0.1 -pa _build/prod/consolidated -S mix phoenix.server >> log/all.log 2>&1
 
-test-release-start:
-	MIX_ENV=prod PORT=4000 rel/exmodfi/bin/exmodfi start
-
-test-release-stop:
-	MIX_ENV=prod PORT=4000 rel/exmodfi/bin/exmodfi stop
-
-test-release-ping:
-	MIX_ENV=prod PORT=4000 rel/exmodfi/bin/exmodfi ping
-
-.PHONY: all deps compile test run clean release test-release-console test-release-start test-release-stop deploy
+.PHONY: all deps compile test run clean prod prod-run

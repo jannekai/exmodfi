@@ -7,3 +7,9 @@
 		<%= safe article_content @id %>
 	</div>
 </div>
+
+<%= if @comments == true do %>
+	<div class="fb-comments" data-width="610" data-numposts="5" data-colorscheme="light" data-href="http://www.mod.fi/article/<%= @id %>"></div>
+<% else %>
+	<div class="row"><p><a href="/article/<%= @id %>">&raquo; Leave a comment</a></p></div>
+<% end %>
