@@ -29,8 +29,8 @@ prod-build:
 	mkdir -p log
 	MIX_ENV=prod mix local.hex --force
 	MIX_ENV=prod mix deps.clean --all
-	MIX_ENV=prod mix mix deps.get
-	MIX_ENV=prod mix mix deps.compile
+	MIX_ENV=prod mix deps.get
+	MIX_ENV=prod mix deps.compile
 	MIX_ENV=prod mix do deps.get, compile.protocols
 
 # For testing running in production mode, actual launch on server is done with deployment/exmodfi.upstart.conf
