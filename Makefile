@@ -25,7 +25,7 @@ clean:
 	mix deps.clean --all
 	mix clean
 
-prod-build: deps
+prod-build:
 	mkdir -p log
 	HOME=$(MAKEFILE_DIR) MIX_ENV=prod mix local.hex --force
 	HOME=$(MAKEFILE_DIR) MIX_ENV=prod mix deps.clean --all
