@@ -27,6 +27,10 @@ clean:
 
 prod-build: deps
 	mkdir -p log
+	HOME=$(MAKEFILE_DIR) MIX_ENV=prod mix local.hex --force
+	HOME=$(MAKEFILE_DIR) MIX_ENV=prod mix deps.clean --all
+	HOME=$(MAKEFILE_DIR) MIX_ENV=prod mix mix deps.get
+	HOME=$(MAKEFILE_DIR) MIX_ENV=prod mix mix deps.compile
 	HOME=$(MAKEFILE_DIR) MIX_ENV=prod mix do deps.get, compile.protocols
 
 # For testing running in production mode, actual launch on server is done with deployment/exmodfi.upstart.conf
