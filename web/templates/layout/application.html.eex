@@ -1,3 +1,3 @@
-<%= render Exmodfi.SharedView, "site_header.html", pagetitle: @pagetitle %></title>
+<%= render Exmodfi.SharedView, "site_header.html", pagetitle: @pagetitle %>
 <%= @inner %>
-<%= render Exmodfi.SharedView, "site_footer.html", %{} %></title>
+<%= render Exmodfi.SharedView, "site_footer.html", %{} %>

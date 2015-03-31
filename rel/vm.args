@@ -1,5 +1,2 @@
-## Name of the node
--name exmodfi@127.0.0.1
-
 ## Cookie for distributed erlang
 -setcookie exmodfi
