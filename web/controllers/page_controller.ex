@@ -31,7 +31,7 @@ defmodule Exmodfi.PageController do
   def show(conn, %{"article" => id}) do
     case find_article id do
       :error -> render conn, "page_not_found.html", pagetitle: "", article: id
-      article -> render conn, "_article.html", pagetitle: " - #{article[:title]}", id: article[:id], date: article[:data], title: article[:title], comments: true
+      article -> render conn, "_article.html", pagetitle: " - #{article[:title]}", id: article[:id], date: article[:date], title: article[:title], comments: true
     end
   end
 

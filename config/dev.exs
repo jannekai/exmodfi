@@ -8,23 +8,20 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :exmodfi, Exmodfi.Endpoint,
   http: [port: 4000],
-  debug_errors: false,
-  catch_errors: true,
+  debug_errors: true,
+  code_reloader: true,
   cache_static_lookup: false,
-  watchers: [{Path.expand("node_modules/brunch/bin/brunch"), ["watch"]}]
+  watchers: [node: ["node_modules/brunch/bin/brunch", "watch"]]
 
 # Watch static and templates for browser reloading.
-# *Note*: Be careful with wildcards. Larger projects
-# will use higher CPU in dev as the number of files
-# grow. Adjust as necessary.
 config :exmodfi, Exmodfi.Endpoint,
-  live_reload: [Path.expand("priv/static/js/app.js"),
-                Path.expand("priv/static/css/app.css"),
-                Path.expand("web/templates/**/*.eex")]
-
-# Enables code reloading for development
-config :phoenix, :code_reloader, true
+  live_reload: [
+    patterns: [
+      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif)$},
+      ~r{web/views/.*(ex)$},
+      ~r{web/templates/.*(eex)$}
+    ]
+  ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
-

@@ -4,7 +4,7 @@
 		<a class="border" href="/article/<%= @id %>"><%= @title %></a>
 	</h1>
 	<div class="intro">
-		<%= safe article_content @id %>
+		<%= raw article_content @id %>
 	</div>
 </div>
 

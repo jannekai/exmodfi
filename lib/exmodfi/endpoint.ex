@@ -1,16 +1,23 @@
 defmodule Exmodfi.Endpoint do
   use Phoenix.Endpoint, otp_app: :exmodfi
 
-  # Serve at "/" the given assets from "priv/static" directory
+  # Serve at "/" the static files from "priv/static" directory.
+  #
+  # You should set gzip to true if you are running phoenix.digest
+  # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :exmodfi,
-    only: ~w(css images js data favicon.ico robots.txt)
+    at: "/", from: :exmodfi, gzip: true,
+    only: ~w(css images js favicon.ico robots.txt)
 
+  # Code reloading can be explicitly enabled under the
+  # :code_reloader configuration of your endpoint.
+  if code_reloading? do
+    plug Phoenix.LiveReloader
+    plug Phoenix.CodeReloader
+  end
+
+  plug Plug.RequestId
   plug Plug.Logger
-
-  # Code reloading will only work if the :code_reloader key of
-  # the :phoenix application is set to true in your config file.
-  plug Phoenix.CodeReloader
 
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
@@ -23,8 +30,7 @@ defmodule Exmodfi.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_exmodfi_key",
-    signing_salt: "yd6BaO6D",
-    encryption_salt: "cThOxGCH"
+    signing_salt: "RrXyeg+7"
 
   plug :router, Exmodfi.Router
 end

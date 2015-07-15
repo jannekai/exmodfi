@@ -8,19 +8,17 @@ defmodule Exmodfi.Web do
       use Exmodfi.Web, :controller
       use Exmodfi.Web, :view
 
-  Keep the definitions in this module short and clean,
-  mostly focused on imports, uses and aliases.
+  The definitions below will be executed for every view,
+  controller, etc, so keep them short and clean, focused
+  on imports, uses and aliases.
+
+  Do NOT define functions inside the quoted expressions
+  below.
   """
 
-  def view do
+  def model do
     quote do
-      use Phoenix.View, root: "web/templates"
-
-      # Import URL helpers from the router
-      import Exmodfi.Router.Helpers
-
-      # Import all HTML functions (forms, tags, etc)
-      use Phoenix.HTML
+      # Define common model functionality
     end
   end
 
@@ -30,6 +28,34 @@ defmodule Exmodfi.Web do
 
       # Import URL helpers from the router
       import Exmodfi.Router.Helpers
+    end
+  end
+
+  def view do
+    quote do
+      use Phoenix.View, root: "web/templates"
+
+      # Import convenience functions from controllers
+      import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
+
+      # Import URL helpers from the router
+      import Exmodfi.Router.Helpers
+
+      # Use all HTML functionality (forms, tags, etc)
+      use Phoenix.HTML
+    end
+  end
+
+  def router do
+    quote do
+      use Phoenix.Router
+    end
+  end
+
+  def channel do
+    quote do
+      use Phoenix.Channel
+
     end
   end
 
