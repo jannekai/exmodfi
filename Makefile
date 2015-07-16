@@ -32,6 +32,6 @@ prod-build:
 
 # For testing running in production mode, actual launch on server is done with deployment/exmodfi.upstart.conf
 prod-run:
-	MIX_ENV=prod PORT=8080 iex --name exmodfi-prod-run@127.0.0.1 -S mix phoenix.server
+	MIX_ENV=prod PORT=9090 iex --name exmodfi-prod-run@127.0.0.1 -S mix phoenix.server
 
 .PHONY: all deps compile test run clean prod-build prod-run
