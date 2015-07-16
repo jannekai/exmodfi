@@ -28,7 +28,7 @@ prod-build:
 	MIX_ENV=prod mix deps.clean --all
 	MIX_ENV=prod mix deps.get
 	MIX_ENV=prod mix deps.compile
-	MIX_ENV=prod mix do deps.get, compile.protocols
+	MIX_ENV=prod mix phoenix.digest
 
 # For testing running in production mode, actual launch on server is done with deployment/exmodfi.upstart.conf
 prod-run:
