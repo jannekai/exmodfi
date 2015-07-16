@@ -11,8 +11,7 @@ config :exmodfi, Exmodfi.Endpoint,
   root: Path.dirname(__DIR__),
   secret_key_base: "meXL8L2TVaRKw81DszeFR7sPnv5D6/1nAo9LrOBm7ruD7Ki9KmySEifLlK1JuGMs",
   render_errors: [default_format: "html"],
-  pubsub: [name: Exmodfi.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Exmodfi.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

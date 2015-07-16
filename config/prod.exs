@@ -13,8 +13,11 @@ use Mix.Config
 # which you typically run after static files are built.
 config :exmodfi, Exmodfi.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/manifest.json"
+  url: [host: "www.mod.fi", port: 80],
+  cache_static_manifest: "priv/static/manifest.json",
+  secret_key_base: "lTxNnt4azKflFibuWAJUp+WrW6mydSfAqYmsRrt2YdVDed7CVCkPYLeJG6BR0Oyo",
+  server: true,
+  debug_errors: false
 
 # ## SSL Support
 #
@@ -46,7 +49,3 @@ config :logger, level: :info
 #
 #     config :exmodfi, Exmodfi.Endpoint, server: true
 #
-
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
