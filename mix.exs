@@ -31,7 +31,7 @@ defmodule Exmodfi.Mixfile do
     [
       {:phoenix, "~> 0.14"},
       {:phoenix_html, "~> 1.1"},
-      {:phoenix_live_reload, "~> 0.4", only: :dev},
+      {:phoenix_live_reload, "~> 0.4", only: [:dev, :errors]},
       {:cowboy, "~> 1.0"},
       {:earmark, "~> 0.1"}
     ]

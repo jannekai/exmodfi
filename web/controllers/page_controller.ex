@@ -1,10 +1,6 @@
 defmodule Exmodfi.PageController do
   use Exmodfi.Web, :controller
 
-  require Logger
-
-  plug :action
-
   @articles [
     [id: "elixir-meetup", date: "2015-03-26", title: "Presentation at Helsinki Elixir Meetup"],
     [id: "alkorytmi-by-cubicle", date: "2012-04-09", title: "Alkorytmi by Cubicle"],
@@ -21,26 +17,29 @@ defmodule Exmodfi.PageController do
   ]
 
   def index(conn, _params) do
-    render conn, "index.html", pagetitle: "", articles: @articles
+    render conn, "index.html", articles: @articles
   end
 
   def show(conn, %{"page" => "contact"}) do
-    render conn, "contact.html", pagetitle: " - Contact"
+    render conn, "contact.html"
   end
 
   def show(conn, %{"article" => id}) do
-    case find_article id do
-      :error -> render conn, "page_not_found.html", pagetitle: "", article: id
-      article -> render conn, "_article.html", pagetitle: " - #{article[:title]}", id: article[:id], date: article[:date], title: article[:title], comments: true
+    case Enum.find @articles, fn article -> article[:id] == id end do
+      nil -> page_not_found conn
+      article -> render conn, "article.html", id: article[:id], date: article[:date], title: article[:title], comments: true
     end
   end
 
   def show(conn, _params) do
-    render conn, "page_not_found.html", pagetitle: ""
+    page_not_found conn
   end
 
-  defp find_article(article_id) do
-    Enum.find(@articles, :error, fn(article) -> article[:id] == article_id end)
+  defp page_not_found(conn) do
+    conn
+    |> put_status(:not_found)
+    |> put_layout(false)
+    |> render(Exmodfi.ErrorView, "page_not_found.html")
   end
 
 end

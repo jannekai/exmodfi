@@ -9,14 +9,15 @@ html, body {
 body {
     background: url(/images/bg.png) repeat;
 }
+
 .container {
-    width: 660px;
+    width: 800px;
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
     padding: 0;
-    margin: 20px auto;
-    padding: 20px 40px;
+    margin: 50px auto;
+    padding: 20px 100px;
 }
 
 /************************************************************************************************
@@ -46,22 +47,21 @@ ul.none li {
 *************************************************************************************************/
 .logo {
     position: absolute;
-    right: -49px;
+    right: -109px;
     top: 90px;
 }
 .header {
     position: relative;
     background-image: url(/images/tree.png);
     background-repeat: no-repeat;
-    font-family: 'Sue Ellen Francisco', cursive;
-    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
     display: table-cell;
     vertical-align: bottom;
     text-align: right;
     height: 90px;
     width: 700px;
     border-bottom: 2px solid black;
-    padding-right: 30px;
 }
 .header ul {
     margin: 0;
@@ -74,46 +74,34 @@ ul.none li {
     margin: 0;
     font-weight: bold;
 }
-.header a:link, .header a:visited {
+.header a {
     color: black;
     background-color: transparent;
     text-decoration: none;
     border: none;
     border-radius: 10px;
     padding: 5px 10px 10px 10px;
+    transition: all 0.5s ease 0s;
 }
 .header a:hover, .header a:active {
     color: white;
     background-color: black;
-    text-decoration: none;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px 10px 10px;
-}
-.header a.rssicon:link, .header a.rssicon:visited, .header a.rssicon:hover, .header a.rssicon:active {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
 }
 
 /*************************************************************************************************
 * Headers
 *************************************************************************************************/
+h1, h2, h3, h3 {
+    font-family: 'Oswald', sans-serif;
+}
 h1 {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 24px;
 }
 h2 {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 18px;
 }
 h3 {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 14px;
 }
 pre {
     padding: 20px;
@@ -123,61 +111,42 @@ pre {
 /*************************************************************************************************
 * Content
 *************************************************************************************************/
-.content a:link, .content a:visited {
+.content a {
     color: black;
     background-color: #eee;
     text-decoration: none;
     border: none;
     border-radius: 4px;
     padding: 2px 5px;
+    transition: all 0.5s ease 0s;
 }
 .content a:hover, .content a:active {
     color: white;
     background-color: orange;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    padding: 2px 5px;
 }
-.content a.nohover:link, .content a.nohover:visited, .content a.nohover:hover, .content a.nohover:active {
-    border-bottom: none !important;
-    text-decoration: none !important;
-    color: black !important;
+.content a.nohover {
     background-color: transparent;
-    padding: 0;
 }
-
-.content a.border:link, .content a.border:visited {
-    border-bottom: none !important;
-    text-decoration: none !important;
-    color: black !important;
+.content a.nohover:hover, .content a.nohover:active {
     background-color: transparent;
-    padding: 2px 5px;
 }
-
-.content a.border:hover, .content a.border:active {
-    border-radius: 10px;
-    text-decoration: none !important;
-    color: white !important;
-    background-color: black !important;
-    padding: 2px 5px;
+.content h1 a {
+    background-color: transparent;
 }
 
 /*************************************************************************************************
 * Article
 *************************************************************************************************/
 .article {
+    margin-top: 20px;
 }
 .article h1 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
     border-bottom: 1px solid orange;
 }
 .article h1 span {
-    font-size: 20px;
+    font-size: 14px;
     color: orange;
-}
-.article .read_more {
-    margin-top: 20px;
-    border-bottom: 1px dotted orange;
-    padding-bottom: 60px;
+    margin-right: 10px;
 }

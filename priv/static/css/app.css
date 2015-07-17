@@ -5155,34 +5155,34 @@ html, body {
 body {
   background: url(/images/bg.png) repeat; }
 
-/* line 12, stdin */
+/* line 13, stdin */
 .container {
-  width: 660px;
+  width: 800px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
   padding: 0;
-  margin: 20px auto;
-  padding: 20px 40px; }
+  margin: 50px auto;
+  padding: 20px 100px; }
 
 /************************************************************************************************
 * Miscellaneous utility styles
 ************************************************************************************************/
-/* line 25, stdin */
+/* line 26, stdin */
 ul.none {
   margin: 0;
   padding: 0; }
 
-/* line 29, stdin */
+/* line 30, stdin */
 ul.none li {
   list-style-type: none; }
 
-/* line 32, stdin */
+/* line 33, stdin */
 .img_round {
   border-radius: 10px;
   box-shadow: 1px 1px 2px #eee; }
 
-/* line 36, stdin */
+/* line 37, stdin */
 .img_left {
   float: left;
   display: block;
@@ -5193,26 +5193,25 @@ ul.none li {
 /*************************************************************************************************
 *   Header / navigation styles
 *************************************************************************************************/
-/* line 47, stdin */
+/* line 48, stdin */
 .logo {
   position: absolute;
-  right: -49px;
+  right: -109px;
   top: 90px; }
 
-/* line 52, stdin */
+/* line 53, stdin */
 .header {
   position: relative;
   background-image: url(/images/tree.png);
   background-repeat: no-repeat;
-  font-family: 'Sue Ellen Francisco', cursive;
-  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
   display: table-cell;
   vertical-align: bottom;
   text-align: right;
   height: 90px;
   width: 700px;
-  border-bottom: 2px solid black;
-  padding-right: 30px; }
+  border-bottom: 2px solid black; }
 
 /* line 66, stdin */
 .header ul {
@@ -5228,52 +5227,40 @@ ul.none li {
   font-weight: bold; }
 
 /* line 77, stdin */
-.header a:link, .header a:visited {
+.header a {
   color: black;
   background-color: transparent;
   text-decoration: none;
   border: none;
   border-radius: 10px;
-  padding: 5px 10px 10px 10px; }
+  padding: 5px 10px 10px 10px;
+  transition: all 0.5s ease 0s; }
 
-/* line 85, stdin */
+/* line 86, stdin */
 .header a:hover, .header a:active {
   color: white;
-  background-color: black;
-  text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  padding: 5px 10px 10px 10px; }
-
-/* line 93, stdin */
-.header a.rssicon:link, .header a.rssicon:visited, .header a.rssicon:hover, .header a.rssicon:active {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  border-radius: 0; }
+  background-color: black; }
 
 /*************************************************************************************************
 * Headers
 *************************************************************************************************/
-/* line 103, stdin */
+/* line 94, stdin */
+h1, h2, h3, h3 {
+  font-family: 'Oswald', sans-serif; }
+
+/* line 97, stdin */
 h1 {
-  font-size: 30px;
-  font-weight: bold;
-  font-family: 'Sue Ellen Francisco', cursive; }
+  font-size: 24px; }
 
-/* line 108, stdin */
+/* line 100, stdin */
 h2 {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Sue Ellen Francisco', cursive; }
+  font-size: 18px; }
 
-/* line 113, stdin */
+/* line 103, stdin */
 h3 {
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Sue Ellen Francisco', cursive; }
+  font-size: 14px; }
 
-/* line 118, stdin */
+/* line 106, stdin */
 pre {
   padding: 20px;
   background-color: #ddd; }
@@ -5281,66 +5268,51 @@ pre {
 /*************************************************************************************************
 * Content
 *************************************************************************************************/
-/* line 126, stdin */
-.content a:link, .content a:visited {
+/* line 114, stdin */
+.content a {
   color: black;
   background-color: #eee;
   text-decoration: none;
   border: none;
   border-radius: 4px;
-  padding: 2px 5px; }
+  padding: 2px 5px;
+  transition: all 0.5s ease 0s; }
 
-/* line 134, stdin */
+/* line 123, stdin */
 .content a:hover, .content a:active {
   color: white;
-  background-color: orange;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  padding: 2px 5px; }
+  background-color: orange; }
 
-/* line 142, stdin */
-.content a.nohover:link, .content a.nohover:visited, .content a.nohover:hover, .content a.nohover:active {
-  border-bottom: none !important;
-  text-decoration: none !important;
-  color: black !important;
-  background-color: transparent;
-  padding: 0; }
+/* line 127, stdin */
+.content a.nohover {
+  background-color: transparent; }
 
-/* line 150, stdin */
-.content a.border:link, .content a.border:visited {
-  border-bottom: none !important;
-  text-decoration: none !important;
-  color: black !important;
-  background-color: transparent;
-  padding: 2px 5px; }
+/* line 130, stdin */
+.content a.nohover:hover, .content a.nohover:active {
+  background-color: transparent; }
 
-/* line 158, stdin */
-.content a.border:hover, .content a.border:active {
-  border-radius: 10px;
-  text-decoration: none !important;
-  color: white !important;
-  background-color: black !important;
-  padding: 2px 5px; }
+/* line 133, stdin */
+.content h1 a {
+  background-color: transparent; }
 
 /*************************************************************************************************
 * Article
 *************************************************************************************************/
-/* line 171, stdin */
+/* line 140, stdin */
+.article {
+  margin-top: 20px; }
+
+/* line 143, stdin */
 .article h1 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid orange; }
 
-/* line 175, stdin */
+/* line 148, stdin */
 .article h1 span {
-  font-size: 20px;
-  color: orange; }
-
-/* line 179, stdin */
-.article .read_more {
-  margin-top: 20px;
-  border-bottom: 1px dotted orange;
-  padding-bottom: 60px; }
+  font-size: 14px;
+  color: orange;
+  margin-right: 10px; }
 
 
 /*# sourceMappingURL=app.css.map*/

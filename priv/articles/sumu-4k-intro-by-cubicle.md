@@ -1,6 +1,6 @@
 
 <div style="float: left; padding-right: 20px; padding-bottom: 20px;">
-<iframe width="610" height="350" src="https://www.youtube.com/embed/L6JFumMQxVc" frameborder="0" allowfullscreen></iframe>
+<iframe width="628" height="400" src="https://www.youtube.com/embed/L6JFumMQxVc" frameborder="0" allowfullscreen></iframe>
 </div>
 
 Our first 4k intro has been released at [Revision 2011](http://www.revision-party.net/) demoparty. The intro placed second

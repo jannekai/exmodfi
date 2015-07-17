@@ -14,7 +14,6 @@ use Mix.Config
 config :exmodfi, Exmodfi.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [host: "www.mod.fi", port: 80],
-  cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: "lTxNnt4azKflFibuWAJUp+WrW6mydSfAqYmsRrt2YdVDed7CVCkPYLeJG6BR0Oyo",
   server: true,
   debug_errors: false

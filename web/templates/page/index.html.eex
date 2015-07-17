@@ -1,5 +1,5 @@
 <%=
 for article <- @articles do
-	render "_article.html", id: article[:id], title: article[:title], date: article[:date], comments: false
+	render "article.html", id: article[:id], title: article[:title], date: article[:date], comments: false
 end
 %>
