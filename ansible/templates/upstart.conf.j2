@@ -20,4 +20,4 @@ env LANG=en_US.UTF-8
 
 post-start exec echo "exmodfi was (re)started on $(date)"
 
-exec elixir --sname exmodfi@mod.fi -S mix phoenix.server  2>&1
+exec elixir --name exmodfi@mod.fi -S mix phoenix.server 2>&1
