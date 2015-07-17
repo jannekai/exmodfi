@@ -1,0 +1,23 @@
+description "Launches www.mod.fi site using Phoenix Framework"
+author "Janne Kaistinen"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+setuid exmodfi
+setgid exmodfi
+
+console output
+
+respawn
+
+chdir /home/exmodfi/deploy
+
+env HOME={{site_base_dir}}
+env MIX_ENV=prod
+env PORT=8080
+env LANG=en_US.UTF-8
+
+post-start exec echo "exmodfi was (re)started on $(date)"
+
+exec elixir --sname exmodfi@mod.fi -S mix phoenix.server  2>&1

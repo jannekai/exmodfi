@@ -1,0 +1,4 @@
+- hosts: webservers
+  become: yes
+  tasks:
+  - include: tasks/deploy.yml
