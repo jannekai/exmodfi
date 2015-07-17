@@ -1,16 +1,10 @@
-<div class="row"><div class="col-md-6 col-md-6"><h1>Contact me</h1></div></div>
-
 <div class="row">
-<div class="col-md-4"><p>You can contact me by email or one of the following social networks:</p></div>
-<div class="col-md-8">
-    <ul class="none">
-        <li><img src="/images/email.png"> <a href="mailto:janne.kaistinen@iki.fi">janne.kaistinen@iki.fi</a></li>
-        <li><img src="/images/facebook.gif"> <a href="http://www.facebook.com/janne.kaistinen">Facebook</a></li>
-        <li><img src="/images/twitter.gif"> <a href="http://twitter.com/#!/jannekai">Twitter</a></li>
-        <li><img src="/images/gplus.ico"> <a href="https://plus.google.com/109941209428197727332/posts">Google+</a></li>
-        <li><img src="/images/linkedin.png"> <a href="http://fi.linkedin.com/in/jannekaistinen">LinkedIn</a></li>
-        <li><img src="/images/github.png"> <a href="https://github.com/jannekai">GitHub</a></li>
-    </ul>
-</div>
-</div>
-<div style="height: 500px;"></div>
+<h1>Contact me</h1>
+<p>You can contact me by email or one of the following social networks:</p>
+<ul class="none"  style="background-image: url(images/tree_large.jpg); background-repeat: no-repeat; background-position: right;">
+    <li style="padding: 2px"><img src="/images/email.png"> <a href="mailto:janne.kaistinen@iki.fi">janne.kaistinen@iki.fi</a></li>
+    <li style="padding: 2px"><img src="/images/facebook.png"> <a href="http://www.facebook.com/janne.kaistinen">Facebook</a></li>
+    <li style="padding: 2px"><img src="/images/twitter.png"> <a href="http://twitter.com/#!/jannekai">Twitter</a></li>
+    <li style="padding: 2px"><img src="/images/linkedin.png"> <a href="http://fi.linkedin.com/in/jannekaistinen">LinkedIn</a></li>
+    <li style="padding: 2px"><img src="/images/github.png"> <a href="https://github.com/jannekai">GitHub</a></li>
+</ul>
