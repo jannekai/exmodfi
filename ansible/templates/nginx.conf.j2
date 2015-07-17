@@ -3,8 +3,14 @@ upstream exmodfi {
 }
 
 server {
+    listen       80;
+    server_name  mod.fi;
+    return       301 http://www.mod.fi$request_uri;
+}
+
+server {
     listen 80;
-    server_name .mod.fi;
+    server_name www.mod.fi;
 
     location / {
         try_files $uri @proxy;
