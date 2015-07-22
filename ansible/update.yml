@@ -1,0 +1,4 @@
+- hosts: web
+  become: yes
+  tasks:
+  - include: tasks/update_web_server.yml

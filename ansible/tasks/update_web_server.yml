@@ -1,0 +1,34 @@
+- name: Update or fetch for first time the source files for application
+  git: repo=https://github.com/jannekai/exmodfi.git dest={{deployment_dir}}
+  register: repository_updated
+  become_user: "{{server_user}}"
+
+- name: Install and update Hex and Rebar
+  shell: mix do local.hex --force, local.rebar --force
+  environment:
+    MIX_ENV: prod
+  become_user: "{{server_user}}"
+  when: repository_updated.changed
+
+- name: Build the server
+  shell: mix do deps.get, deps.compile, compile chdir={{deployment_dir}}
+  environment:
+    MIX_ENV: prod
+  become_user: "{{server_user}}"
+  when: repository_updated.changed
+
+- name: Render upstart configuration template
+  template: src=upstart.conf.j2 dest=/etc/init/{{server_name}}.conf
+  when: repository_updated.changed
+
+- name: Render nginx configuration template
+  template: src=nginx.conf.j2 dest=/etc/nginx/sites-available/{{server_name}}
+  when: repository_updated.changed
+
+- name: Restart nginx service
+  service: name=nginx state=restarted
+  when: repository_updated.changed
+
+- name: Restart exmodfi service
+  service: name=exmodfi state=restarted
+  when: repository_updated.changed

@@ -1,10 +1,20 @@
 <div class="row">
-<h1>Contact me</h1>
-<p>You can contact me by email or one of the following social networks:</p>
-<ul class="none"  style="background-image: url(images/tree_large.jpg); background-repeat: no-repeat; background-position: right;">
-    <li style="padding: 2px"><img src="/images/email.png"> <a href="mailto:janne.kaistinen@iki.fi">janne.kaistinen@iki.fi</a></li>
-    <li style="padding: 2px"><img src="/images/facebook.png"> <a href="http://www.facebook.com/janne.kaistinen">Facebook</a></li>
-    <li style="padding: 2px"><img src="/images/twitter.png"> <a href="http://twitter.com/#!/jannekai">Twitter</a></li>
-    <li style="padding: 2px"><img src="/images/linkedin.png"> <a href="http://fi.linkedin.com/in/jannekaistinen">LinkedIn</a></li>
-    <li style="padding: 2px"><img src="/images/github.png"> <a href="https://github.com/jannekai">GitHub</a></li>
-</ul>
+	<h1>Contact me</h1>
+	<p>You can contact me by email or one of the following social networks:</p>
+</div>
+
+<div class="row">
+	<div class="col-md-5">
+	<ul class="none">
+	    <li style="padding: 2px"><img src="/images/email.png"> <a href="mailto:janne.kaistinen@iki.fi">janne.kaistinen@iki.fi</a></li>
+	    <li style="padding: 2px"><img src="/images/facebook.png"> <a href="http://www.facebook.com/janne.kaistinen">Facebook</a></li>
+	    <li style="padding: 2px"><img src="/images/linkedin.png"> <a href="http://fi.linkedin.com/in/jannekaistinen">LinkedIn</a></li>
+	    <li style="padding: 2px"><img src="/images/github.png"> <a href="https://github.com/jannekai">GitHub</a></li>
+	</ul>
+	</div>
+
+	<div class="col-md-7">
+		<a class="twitter-timeline" href="https://twitter.com/jannekai" data-widget-id="622359531897667584">Tweets by @jannekai</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+</div>

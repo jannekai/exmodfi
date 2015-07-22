@@ -1,0 +1,6 @@
+server_name: exmodfi
+server_user: exmodfi
+dns_base_name: mod.fi
+dns_full_name: www.mod.fi
+home_dir: /home/exmodfi
+deployment_dir: /home/exmodfi/deploy

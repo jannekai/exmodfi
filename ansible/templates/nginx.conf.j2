@@ -1,16 +1,16 @@
-upstream exmodfi {
+upstream {{server_name}} {
     server 127.0.0.1:8080;
 }
 
 server {
     listen       80;
-    server_name  mod.fi;
-    return       301 http://www.mod.fi$request_uri;
+    server_name  {{dns_base_name}};
+    return       301 http://{{dns_full_name}}$request_uri;
 }
 
 server {
     listen 80;
-    server_name www.mod.fi;
+    server_name {{dns_full_name}};
 
     location / {
         try_files $uri @proxy;
@@ -19,6 +19,6 @@ server {
     location @proxy {
         include proxy_params;
         proxy_redirect off;
-        proxy_pass http://exmodfi;
+        proxy_pass http://{{server_name}};
     }
 }

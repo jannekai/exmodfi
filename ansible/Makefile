@@ -6,7 +6,7 @@ ping:
 logs:
 	ansible webservers -m shell -a "tail -n100 /var/log/upstart/exmodfi.log" --become
 
-deploy:
-	ansible-playbook deploy.yml
+update:
+	ansible-playbook update.yml
 
-.PHONY: ping logs
+.PHONY: ping logs update

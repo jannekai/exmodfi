@@ -2,6 +2,7 @@ defmodule Exmodfi.PageController do
   use Exmodfi.Web, :controller
 
   @articles [
+    [id: "deploying-phoenix-website-with-ansible", date: "2015-07-17", title: "Deploying a Phoenix website with Ansible"],
     [id: "elixir-meetup", date: "2015-03-26", title: "Presentation at Helsinki Elixir Meetup"],
     [id: "alkorytmi-by-cubicle", date: "2012-04-09", title: "Alkorytmi by Cubicle"],
     [id: "anglerfish-by-cubicle", date: "2011-08-08", title: "Anglerfish by Cubicle"],
