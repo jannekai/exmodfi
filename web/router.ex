@@ -8,10 +8,6 @@ defmodule Exmodfi.Router do
     plug :protect_from_forgery
   end
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
   scope "/", Exmodfi do
     pipe_through :browser # Use the default browser stack
 
@@ -20,8 +16,4 @@ defmodule Exmodfi.Router do
     get "/article/:article", PageController, :show
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Exmodfi do
-  #   pipe_through :api
-  # end
 end
