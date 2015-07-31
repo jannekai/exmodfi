@@ -10,6 +10,11 @@
   become_user: "{{server_user}}"
   when: repository_updated.changed
 
+- name: Build static assets with brunch
+  shell: node_modules/brunch/bin/brunch build --production chdir={{deployment_dir}}
+  become_user: "{{server_user}}"
+  when: repository_updated.changed
+
 - name: Build the server
   shell: mix do deps.get, deps.compile, compile chdir={{deployment_dir}}
   environment:
