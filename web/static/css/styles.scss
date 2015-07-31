@@ -47,6 +47,13 @@ code {
     color: black;
     background-color: #eee;
 }
+pre {
+    background-color: #eee;
+}
+
+.hljs {
+    background-color: #eee;
+}
 
 /*************************************************************************************************
 *   Header / navigation styles
@@ -99,19 +106,17 @@ code {
 *************************************************************************************************/
 h1, h2, h3, h3 {
     font-family: 'Oswald', sans-serif;
+    color: #331F00;
 }
 h1 {
     font-size: 24px;
+    color: black;
 }
 h2 {
     font-size: 18px;
 }
 h3 {
     font-size: 14px;
-}
-pre {
-    padding: 20px;
-    background-color: #ddd;
 }
 
 /*************************************************************************************************

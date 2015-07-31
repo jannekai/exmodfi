@@ -5197,16 +5197,24 @@ code {
   color: black;
   background-color: #eee; }
 
+/* line 50, stdin */
+pre {
+  background-color: #eee; }
+
+/* line 54, stdin */
+.hljs {
+  background-color: #eee; }
+
 /*************************************************************************************************
 *   Header / navigation styles
 *************************************************************************************************/
-/* line 54, stdin */
+/* line 61, stdin */
 .logo {
   position: absolute;
   right: -109px;
   top: 90px; }
 
-/* line 59, stdin */
+/* line 66, stdin */
 .header {
   position: relative;
   background-image: url(/images/tree.png);
@@ -5220,12 +5228,12 @@ code {
   width: 700px;
   border-bottom: 2px solid black; }
 
-/* line 72, stdin */
+/* line 79, stdin */
 .header ul {
   margin: 0;
   padding: 0; }
 
-/* line 76, stdin */
+/* line 83, stdin */
 .header li {
   display: inline;
   list-style-type: none;
@@ -5233,7 +5241,7 @@ code {
   margin: 0;
   font-weight: bold; }
 
-/* line 83, stdin */
+/* line 90, stdin */
 .header a {
   color: black;
   background-color: transparent;
@@ -5243,7 +5251,7 @@ code {
   padding: 5px 10px 10px 10px;
   transition: all 0.5s ease 0s; }
 
-/* line 92, stdin */
+/* line 99, stdin */
 .header a:hover, .header a:active {
   color: white;
   background-color: black; }
@@ -5251,31 +5259,28 @@ code {
 /*************************************************************************************************
 * Headers
 *************************************************************************************************/
-/* line 100, stdin */
+/* line 107, stdin */
 h1, h2, h3, h3 {
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+  color: #331F00; }
 
-/* line 103, stdin */
+/* line 111, stdin */
 h1 {
-  font-size: 24px; }
+  font-size: 24px;
+  color: black; }
 
-/* line 106, stdin */
+/* line 115, stdin */
 h2 {
   font-size: 18px; }
 
-/* line 109, stdin */
+/* line 118, stdin */
 h3 {
   font-size: 14px; }
-
-/* line 112, stdin */
-pre {
-  padding: 20px;
-  background-color: #ddd; }
 
 /*************************************************************************************************
 * Content
 *************************************************************************************************/
-/* line 120, stdin */
+/* line 125, stdin */
 .content a {
   color: black;
   background-color: #eee;
@@ -5285,37 +5290,37 @@ pre {
   padding: 2px 5px;
   transition: all 0.5s ease 0s; }
 
-/* line 129, stdin */
+/* line 134, stdin */
 .content a:hover, .content a:active {
   color: white;
   background-color: orange; }
 
-/* line 133, stdin */
+/* line 138, stdin */
 .content a.nohover {
   background-color: transparent; }
 
-/* line 136, stdin */
+/* line 141, stdin */
 .content a.nohover:hover, .content a.nohover:active {
   background-color: transparent; }
 
-/* line 139, stdin */
+/* line 144, stdin */
 .content h1 a {
   background-color: transparent; }
 
 /*************************************************************************************************
 * Article
 *************************************************************************************************/
-/* line 146, stdin */
+/* line 151, stdin */
 .article {
   margin-top: 20px; }
 
-/* line 149, stdin */
+/* line 154, stdin */
 .article h1 {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid orange; }
 
-/* line 154, stdin */
+/* line 159, stdin */
 .article h1 span {
   font-size: 14px;
   color: orange;

@@ -2,6 +2,7 @@ defmodule Exmodfi.PageController do
   use Exmodfi.Web, :controller
 
   @articles [
+    [id: "switching-aws-credentials", date: "2015-07-30", title: "Switching AWS credentials easily"],
     [id: "deploying-phoenix-website-with-ansible", date: "2015-07-22", title: "Deploying a Phoenix website with Ansible"],
     [id: "elixir-meetup", date: "2015-03-26", title: "Presentation at Helsinki Elixir Meetup"],
     [id: "alkorytmi-by-cubicle", date: "2012-04-09", title: "Alkorytmi by Cubicle"],

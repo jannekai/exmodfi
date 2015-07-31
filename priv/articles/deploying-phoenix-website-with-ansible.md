@@ -34,7 +34,7 @@ Because ansible uses convention over configuration, file and directory names hav
 
 The final result for updating web server consists from the following files and directories.
 
-```
+```nohighlight
 ansible.cfg                 # General ansible configuration
 update.yml                  # Main playbook for updating the web site
 Makefile                    # Ansible commands for running tasks
@@ -56,7 +56,7 @@ Ansible has many configuration options for configuring how to connect to servers
 I prefer having all required files for any project stored in repository whenever possible. So instead of using __~/.ansible.cfg__ or environment variables I used __ansible.cfg__ file in the directory where commands are run. The same reason is why I used __inventory/hosts__ file instead of configuring servers in global __/etc/ansible/hosts__.
 
 __ansible.cfg__
-```
+```ini
 [defaults]
 private_key_file = ~/.ssh/aws-key.pem
 remote_user = janneka
@@ -68,7 +68,7 @@ inventory = inventory/hosts
 In ansible lingo, inventory is a categorized set of hosts to connect. For this website there is only one server and it is placed in the group __web__. The [ansible inventory documentation](http://docs.ansible.com/intro_inventory.html) describes how you can compose groups with more complex server configurations. You can also use dynamic inventories, where host data is queried from external system like EC2 or LDAP.
 
 __inventory\hosts__
-```
+```ini
 [webservers]
 www.mod.fi
 ```
