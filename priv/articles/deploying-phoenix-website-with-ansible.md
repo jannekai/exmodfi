@@ -123,6 +123,11 @@ __tasks/update_web_server.yml__
   become_user: "{{server_user}}"
   when: repository_updated.changed
 
+- name: Build static assets with brunch
+  shell: brunch build --production chdir={{deployment_dir}}
+  become_user: "{{server_user}}"
+  when: repository_updated.changed
+
 - name: Build the server
   shell: mix do deps.get, deps.compile, compile chdir={{deployment_dir}}
   environment:

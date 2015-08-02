@@ -11,7 +11,7 @@
   when: repository_updated.changed
 
 - name: Build static assets with brunch
-  shell: node_modules/brunch/bin/brunch build --production chdir={{deployment_dir}}
+  shell: brunch build --production chdir={{deployment_dir}}
   become_user: "{{server_user}}"
   when: repository_updated.changed
 
