@@ -29,9 +29,9 @@ defmodule Exmodfi.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [
-      {:phoenix, "~> 0.15"},
+      {:phoenix, "~> 0.16"},
       {:phoenix_html, "~> 1.4"},
-      {:phoenix_live_reload, "~> 0.5", only: :dev},
+      {:phoenix_live_reload, "~> 0.6", only: :dev},
       {:cowboy, "~> 1.0"},
       {:earmark, "~> 0.1"}
     ]
