@@ -7,7 +7,9 @@ rebar:
 	@mix do local.rebar --force
 
 node:
+	@npm prune
 	@npm install
+	@npm update
 
 deps: hex rebar node
 	mix deps.get
@@ -26,7 +28,6 @@ run: compile
 	iex -S mix phoenix.server
 
 clean:
-	@rm -rf node_modules/*
 	mix deps.clean --all
 	mix clean
 
@@ -43,4 +44,4 @@ errors:
 	MIX_ENV=errors mix compile
 	MIX_ENV=errors iex -S mix phoenix.server
 
-.PHONY: all hex rebar node deps compile test run clean errors
+.PHONY: all hex rebar node deps compile test run clean prod prod-run errors
