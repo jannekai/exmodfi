@@ -10,10 +10,6 @@
   shell: make deps|logger chdir={{deployment_dir}}
   become_user: "{{server_user}}"
 
-- name: Build static assets with brunch
-  shell: brunch build --production|logger chdir={{deployment_dir}}
-  become_user: "{{server_user}}"
-
 - name: Build the server
   shell: make prod|logger chdir={{deployment_dir}}
   become_user: "{{server_user}}"

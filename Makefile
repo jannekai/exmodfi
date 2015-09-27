@@ -31,7 +31,9 @@ clean:
 	mix clean
 
 prod:
-	MIX_ENV=prod mix compile
+	@node node_modules/brunch/bin/brunch build --production
+	@MIX_ENV=prod mix phoenix.digest
+	@MIX_ENV=prod mix compile
 
 prod-run:
 	MIX_ENV=prod PORT=8080 LANG=en_US.UTF-8 mix phoenix.server
