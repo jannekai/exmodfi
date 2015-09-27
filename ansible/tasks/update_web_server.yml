@@ -1,24 +1,21 @@
 - name: Update or fetch for first time the source files for application
   git: repo=https://github.com/jannekai/exmodfi.git dest={{deployment_dir}}
-  register: repository_updated
   become_user: "{{server_user}}"
 
-- name: Install and update Hex and Rebar
-  shell: mix do local.hex --force, local.rebar --force
-  environment:
-    MIX_ENV: prod
+- name: Cleanup previous build artifacts
+  shell: make clean chdir={{deployment_dir}}
   become_user: "{{server_user}}"
-  when: repository_updated.changed
+
+- name: Update build tools and dependencies
+  shell: make deps chdir={{deployment_dir}}
+  become_user: "{{server_user}}"
 
 - name: Build static assets with brunch
   shell: brunch build --production chdir={{deployment_dir}}
   become_user: "{{server_user}}"
-  when: repository_updated.changed
 
 - name: Build the server
-  shell: mix do deps.get, deps.compile, compile chdir={{deployment_dir}}
-  environment:
-    MIX_ENV: prod
+  shell: make prod chdir={{deployment_dir}}
   become_user: "{{server_user}}"
   when: repository_updated.changed
 
