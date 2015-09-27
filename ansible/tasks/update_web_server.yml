@@ -3,34 +3,29 @@
   become_user: "{{server_user}}"
 
 - name: Cleanup previous build artifacts
-  shell: make clean chdir={{deployment_dir}}
+  shell: make clean|logger chdir={{deployment_dir}}
   become_user: "{{server_user}}"
 
 - name: Update build tools and dependencies
-  shell: make deps chdir={{deployment_dir}}
+  shell: make deps|logger chdir={{deployment_dir}}
   become_user: "{{server_user}}"
 
 - name: Build static assets with brunch
-  shell: brunch build --production chdir={{deployment_dir}}
+  shell: brunch build --production|logger chdir={{deployment_dir}}
   become_user: "{{server_user}}"
 
 - name: Build the server
-  shell: make prod chdir={{deployment_dir}}
+  shell: make prod|logger chdir={{deployment_dir}}
   become_user: "{{server_user}}"
-  when: repository_updated.changed
 
 - name: Render upstart configuration template
   template: src=upstart.conf.j2 dest=/etc/init/{{server_name}}.conf
-  when: repository_updated.changed
 
 - name: Render nginx configuration template
   template: src=nginx.conf.j2 dest=/etc/nginx/sites-available/{{server_name}}
-  when: repository_updated.changed
 
 - name: Restart nginx service
   service: name=nginx state=restarted
-  when: repository_updated.changed
 
 - name: Restart exmodfi service
   service: name=exmodfi state=restarted
-  when: repository_updated.changed
